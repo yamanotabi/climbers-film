@@ -49,7 +49,13 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/pwa'
   ],
+
+  mainfest: {
+    name: 'climbers-film',
+    lang: 'ja'
+  },
 
   /*
   ** Build configuration
