@@ -63,8 +63,13 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Web3 from 'web3';
 
 export default {
+  created() {
+    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546');
+    web3.eth.getAccounts().then(console.log);
+  },
   components: {
     Logo,
     VuetifyLogo
