@@ -18,6 +18,9 @@ contract ClimberFilmToken is ERC721Full, ERC721Mintable, ERC721Burnable {
     /* STORAGE */
     ClimberFilm[] climberFilms;
 
+    // Mapping from subscriber to tokenId
+    mapping(address => string[]) subscribed;
+
     /* CONSTRUCTOR */
     constructor() ERC721Full("ClimberFilmToken", "CFT") public {
     }
@@ -45,7 +48,11 @@ contract ClimberFilmToken is ERC721Full, ERC721Mintable, ERC721Burnable {
         }
     }
 
-    function buy() public {
+    function subscribe() public {
+        // TODO: Implement
+    }
+
+    function publish() public {
         // TODO: Implement
     }
 
